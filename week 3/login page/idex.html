@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h1>Welcome back</h1>
+
+            <p class="subtitle">
+                Sign in to continue to your account
+            </p>
+
+
+            <!-- Google -->
+            <button class="social-button">
+                <i class="fa-brands fa-google google"></i>
+                <span>Continue with Google</span>
+            </button>
+
+
+            <!-- GitHub -->
+            <button class="social-button">
+                <i class="fa-brands fa-github github"></i>
+                <span>Continue with GitHub</span>
+            </button>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <form>
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <div class="input-container">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <div class="input-container">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required>
+
+                        <i class="fa-regular fa-eye"
+                           id="eye"
+                           onclick="togglePassword()">
+                        </i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember -->
+                <div class="remember">
+
+                    <input type="checkbox" id="remember">
+
+                    <label for="remember">
+                        Remember me
+                    </label>
+
+                </div>
+
+
+                <!-- Sign In -->
+                <button type="submit" class="signin-button">
+                    Sign in
+                </button>
+
+            </form>
+
+
+            <!-- Register -->
+            <p class="register">
+                Don't have an account?
+                <a href="#">Create an account</a>
+            </p>
+
+
+            <!-- Terms -->
+            <p class="terms">
+                By continuing, you agree to our
+                <a href="#">Terms of Service</a>
+                and
+                <a href="#">Privacy Policy</a>.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            const eye =
+                document.getElementById("eye");
+
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                eye.classList.remove("fa-eye");
+
+                eye.classList.add("fa-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                eye.classList.remove("fa-eye-slash");
+
+                eye.classList.add("fa-eye");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
