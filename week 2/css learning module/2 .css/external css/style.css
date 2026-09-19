@@ -1,0 +1,11 @@
+h1 {
+    color: rgb(159, 55, 147);
+    text-align: center;
+}
+p {
+    color: gray;
+    font-size: 80px;
+}
+body {
+    background-color: lightyellow;
+}

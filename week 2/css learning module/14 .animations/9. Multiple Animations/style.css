@@ -1,0 +1,27 @@
+body {
+    margin: 50px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation:
+        move 3s infinite alternate,
+        color 3s infinite alternate;
+}
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(250px);
+    }
+}
+@keyframes color {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: blue;
+    }
+}
